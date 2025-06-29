@@ -74,8 +74,7 @@ the conformations—consistent with partial agonist binding profiles that stabil
 - matplotlib (for histogram visualization)
 
 Install RDKit via Conda (to enable full features of the RDKit):
-```bash
-conda install -c rdkit rdkit
+(Use 'conda install -c rdkit rdkit' on the terminal to install instead of 'pip install rdkit')
 
 ---
 
