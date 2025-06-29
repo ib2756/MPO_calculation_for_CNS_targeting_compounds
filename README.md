@@ -1,13 +1,9 @@
 # CNS MPO Scoring and Partial Agonist Screening Toolkit
-This repository contains a four-stage Python-based pipeline for evaluating ligand candidates targeting central nervous system (CNS) proteins—specifically focused on 
-the discovery of dopamine D3 receptor (DRD3) partial agonists. The workflow integrates cheminformatics tools to systematically extract molecular descriptors, 
+This repository contains a four-stage Python-based pipeline for evaluating ligand candidates targeting central nervous system (CNS) proteins—specifically focused on the discovery of dopamine D3 receptor (DRD3) partial agonists. The workflow integrates cheminformatics tools to systematically extract molecular descriptors, 
 apply CNS-specific multi-parameter optimization (MPO) scoring, and perform benchmark-based filtering of candidate molecules across multiple receptor conformations.
 The scoring strategy implemented in 1_CNS_MPO_calculator.py was developed with blood-brain barrier (BBB) permeability and CNS drug-likeness in mind. 
-The selected molecular properties (e.g., QPlogPo/w, QPlogBB, TPSA, HBD/HBA, rotatable bonds) and their respective desirability ranges were based on pharmacokinetic profiles of 
-known CNS-penetrant drugs. The flat-top Gaussian desirability function ensures a smooth, penalty-aware evaluation of each parameter, while normalizing docking scores provides 
-fair comparison of binding strength across molecules.
-While this MPO scoring is essential for early prioritization, it is insufficient on its own for identifying partial agonists—which must exhibit optimal interactions 
-in both the active and inactive conformations of the GPCR target. To address this, the pipeline includes 2_Partial_Agonist_matchmaker.py and 3_Partial_Agonist_Postprocessor.py.
+The selected molecular properties (e.g., QPlogPo/w, QPlogBB, TPSA, HBD/HBA, rotatable bonds) and their respective desirability ranges were based on pharmacokinetic profiles of known CNS-penetrant drugs. The flat-top Gaussian desirability function ensures a smooth, penalty-aware evaluation of each parameter, 
+while normalizing docking scores provides fair comparison of binding strength across molecules. While this MPO scoring is essential for early prioritization, it is insufficient on its own for identifying partial agonists—which must exhibit optimal interactions in both the active and inactive conformations of the GPCR target. To address this, the pipeline includes 2_Partial_Agonist_matchmaker.py and 3_Partial_Agonist_Postprocessor.py.
 
 
 ---
