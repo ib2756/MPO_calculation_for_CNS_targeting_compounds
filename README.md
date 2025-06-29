@@ -4,8 +4,6 @@ apply CNS-specific multi-parameter optimization (MPO) scoring, and perform bench
 The scoring strategy implemented in 1_CNS_MPO_calculator.py was developed with blood-brain barrier (BBB) permeability and CNS drug-likeness in mind. 
 The selected molecular properties (e.g., QPlogPo/w, QPlogBB, TPSA, HBD/HBA, rotatable bonds) and their respective desirability ranges were based on pharmacokinetic profiles of known CNS-penetrant drugs. The flat-top Gaussian desirability function ensures a smooth, penalty-aware evaluation of each parameter, 
 while normalizing docking scores provides fair comparison of binding strength across molecules. While this MPO scoring is essential for early prioritization, it is insufficient on its own for identifying partial agonists—which must exhibit optimal interactions in both the active and inactive conformations of the GPCR target. To address this, the pipeline includes 2_Partial_Agonist_matchmaker.py and 3_Partial_Agonist_Postprocessor.py. 
-This project was developed by In Young Bae with significant assistance from ChatGPT 4o model during the coding implementation stage.
-
 
 ---
 
@@ -96,4 +94,7 @@ Run 2_Partial_Agonist_matchmaker.py to align compounds across active and inactiv
 F. Postprocess and Rank Candidates
 Execute 3_Partial_Agonist_Postprocessor.py to calculate average and delta MPO/docking scores, rank candidates, and output top-performing partial agonist leads.
 
+---
 
+## Author
+In Young Bae of New York City College of Technology developed this toolkit as part of a CNS-targeted partial agonist drug design project, with the ChatGPT 4o model providing substantial support during the coding implementation stage.
