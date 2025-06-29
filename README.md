@@ -75,23 +75,23 @@ Install RDKit via Conda (to enable full features of the RDKit):
 
 ## Recommended Workflow
 
-# A. Docking & QikProp (in Maestro)
+### A. Docking & QikProp (in Maestro)
 Perform Glide docking and QikProp property prediction on your ligand set using PDB structures of both the active and inactive conformations of the target GPCR protein.
 
-# B. Export Structures from Maestro
+### B. Export Structures from Maestro
 Export the ligand structures as .sdf files from Maestro’s Table tool.
 *** Be sure to: Enable "Use display names" and Select "All properties" for export
 
-# C. Generate Descriptors
+### C. Generate Descriptors
 Run 0_SDF_to_CSV_converter.py to convert the exported .sdf file into a .csv file containing all required molecular descriptors.
 
-# D. MPO Scoring
+### D. MPO Scoring
 Use 1_CNS_MPO_calculator.py to compute MPO scores based on CNS drug-likeness criteria and normalize the docking scores.
 
-# E. Match Active/Inactive States
+### E. Match Active/Inactive States
 Run 2_Partial_Agonist_matchmaker.py to align compounds across active and inactive conformations, filter out those that underperform a benchmark (e.g., cariprazine), and retain only those with superior dual-state performance.
 
-# F. Postprocess and Rank Candidates
+### F. Postprocess and Rank Candidates
 Execute 3_Partial_Agonist_Postprocessor.py to calculate average and delta MPO/docking scores, rank candidates, and output top-performing partial agonist leads.
 
 ---
